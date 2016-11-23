@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="adivinarNumero">
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<title>Clase 2</title>
+</head>
+<body >
+	<h1>Adivina el numero</h1>
+	<p class="well lead">Elige un numero entre el 1 y el 1000 y acierta el resultado</p>
+
+	<div class="container" ng-controller="GuessTheNumberController">
+		<label>Numero :</label><input type="number" ng-model="guess">
+
+		<button ng-click="verifyGuess()" class="btn btn-primary btn-sm">verificar</button>
+		<button ng-click="initializeGame()" class="btn btn-warning btn-sm">Reiniciar</button>
+
+		<p>Cantidad de veces que probaste {{no0fTries}}</p>
+		<p>
+			<p ng-show="deviation<0">Tu numero es mayor</p>
+			<p ng-show="deviation>0">Tu numero es menor</p>
+			<p ng-show="deviation===0">Adivinaste</p>
+		</p>
+	</div>
+
+	
+</body>
+</html>
