@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	 <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"><link href="css/app.css" rel="stylesheet">
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/7minWorkout/workout.js"></script></head>
+<body ng-controller="WorkoutController">
+
+<div class="navbar navbar-default navbar-fixed-top top-navbar">
+        <div class="container app-container">
+            <div class="navbar-header">
+                <h1>7 Minutos de Ejercicios</h1>
+            </div>
+        </div>
+  </div>
+
+    <div class="container body-content app-container">
+        <pre>Ejercicio Actual: {{ejercicioActual | json}}</pre>
+        <pre>Tiempo restante: {{ejercicioActual.duracion-duracionEjercicioActual}}</pre>
+    </div>
+
+</body>
+</html>
